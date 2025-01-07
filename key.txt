@@ -1,1 +1,1 @@
-mykey1 = "AIzaSyAOn62o8655Nt37-nAB0BEC_V7rJAs7drg"
+Put your key here if required.
