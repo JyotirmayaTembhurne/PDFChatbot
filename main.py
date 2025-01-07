@@ -27,8 +27,6 @@ if uploaded_file is not None:
 
     # Step 3: Chunk the text into smaller parts (using gemini_model)
     chunks = gemini_model.content_chunking(extracted_text)
-    st.write("Chunks Generated:")
-    st.write(chunks)
 
     # Step 4: Convert chunks to embeddings
     chunk_embeddings = process_chunks(chunks)
@@ -47,8 +45,6 @@ if uploaded_file is not None:
 
         # Step 8: Extract and display the most relevant chunks based on the similarity
         most_relevant_chunks = [chunks[idx] for idx, _ in top_matches]
-        st.write("Most Relevant Chunks:")
-        st.write(most_relevant_chunks)
 
         # Step 9: Combine the relevant chunks into a context for the AI model
         combined_context = "\n\n".join(most_relevant_chunks)
